@@ -1,7 +1,7 @@
 resource "volterra_cloud_credentials" "azure_cred" {
   count = var.az_ce_site ? 1 : 0
   name      = format("%s-az-creds-%s", local.project_prefix, local.build_suffix)
-  namespace = "system"
+  namespace = "system2"
   azure_client_secret {
     client_id = "${var.azure_service_principal_appid}"
     client_secret {
